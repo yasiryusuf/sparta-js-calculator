@@ -1,5 +1,5 @@
 var typeOfCalculator = prompt("Enter a for Advanced Calculator, Enter b for Basic Calculator");
-var num1 = parseFloat(prompt("Enter your First Number: "));
+var num1 = parseFloat(prompt("Please Enter your First Number: "));
 var answer;
 
 if (typeOfCalculator == "a") {
@@ -10,25 +10,30 @@ if (typeOfCalculator == "a") {
   console.log("Invalid Option");
 }
 
-if(operation == + || operation == - || operation == * || operation == / || operation == "p") {
-  var num2 = parseFloat(prompt("Enter the Second Number: "));
-}
+if(operation == "+" || operation == "-" || operation == "*" || operation == "/" || operation == "s") {
+ var number2 = parseFloat(prompt("Please Enter your Second number: "));
 
 switch (operation) {
-  case "+""-","/","*","s","p":
-      var number2 = parseFloat(prompt("Enter second Number"));
-    break;
-    case "+":
-    answer = number1 + number2;
+  case "+":
+    answer = num1 + num2;
     break;
     case "-":
-    answer = number1 - number2;
-    break;
-    case "/":
-    answer = number1 / number2;
+    answer = num1 + num2;
     break;
     case "*":
-    answer = number1 * number2;
-  default:
-    console.log(operation);
+    answer = num1 - num2;
+    break;
+    case "/":
+    answer = num1 / num2;
+    break;
+    case "p":
+    answer = Math.pow(num1, num2);
+    break;
+    case "s":
+    answer = Math.sqrt(num1);
+    break;
+    default:
+    break;
 }
+
+alert(num1 + " " + operation + " " + num2 + " = " + answer);
